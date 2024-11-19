@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Rutas y Calidad del Aire</title>
+    
+    <!-- Estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Agregar Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.3/dist/leaflet-routing-machine.css"/>
+</head>
+<body>
+    <!-- Selector de modo -->
+    <div id="mode-selection">
+        <h2>Selecciona el Modo</h2>
+        <button id="conductor-btn">Conductor</button>
+        <button id="deportista-btn">Deportista</button>
+    </div>
+
+    <!-- Botón para resetear -->
+    <button id="reset-btn" style="position: absolute; top: 20px; left: 20px; background-color: #dc3545;">Volver al inicio</button>
+
+    <!-- Controles de tráfico y ruta -->
+    <div id="controls" style="display: none; position: absolute; top: 20px; left: 150px; z-index: 1000;">
+        <button id="toggle-traffic-btn" style="background-color: #ffc107;">Activar tráfico</button>
+        <button id="set-route-btn" style="background-color: #007bff;">Establecer Ruta</button>
+        <button id="clear-route-btn" style="background-color: #17a2b8;">Limpiar Ruta</button>
+    </div>
+
+    <!-- Mapa -->
+    <div id="map"></div>
+
+    <!-- Scripts de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.3/dist/leaflet-routing-machine.js"></script>
+
+    <!-- Tu archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
